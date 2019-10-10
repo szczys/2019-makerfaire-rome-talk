@@ -13,7 +13,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-  background:linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('images/shapes-background.jpg');
+  background:linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('images/shapes-background.jpg');
   background-color: #191919; }
 
 .reveal {

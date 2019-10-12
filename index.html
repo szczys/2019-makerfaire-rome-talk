@@ -42,7 +42,7 @@
 						<h4>Hackaday.com is our Editorial Voice</h4>
 						<aside class="notes">
 							code used to make this slideshow video:
-							cat *.png | ffmpeg -framerate 0.7 -f image2pipe -i - output.mkv
+							ffmpeg -framerate 0.7 -pattern_type glob -i '*.png' -c:v libx264 -pix_fmt yuv420p -vf pad="width=ceil(iw/2)*2:height=ceil(ih/2)*2" out.mp4
 						</aside>
 					</section>
 					<section>
@@ -50,7 +50,7 @@
 						<h4>Hackaday.io is our Community Platform</h4>
 						<aside class="notes">
 							code used to make this slideshow video:
-							cat *.png | ffmpeg -framerate 0.7 -f image2pipe -i - output.mkv
+							ffmpeg -framerate 0.7 -pattern_type glob -i '*.png' -c:v libx264 -pix_fmt yuv420p -vf pad="width=ceil(iw/2)*2:height=ceil(ih/2)*2" out.mp4
 						</aside>
 					</section>
 				</section>

@@ -48,3 +48,19 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
 1. Open <http://localhost:8000> to view your presentation
 
    You can change the port by using `npm start -- --port=8001`.
+
+# Exporting to PDF
+
+It's always nice to have a PDF when all else fails and you just need to show the presentation on someone else's machine. Reveal.js has options for PDF export but when making the style for this deck I didn't make changes to the PDF print styling so things like the background image is missing.
+
+The alternative solution to this is to use Decktape to export the slides. This works great, except for the embedded videos which don't get exported at all (not even a thumbnail image). My solution was to export the deck as screenshots using Decktape, then take my own screenshots of the slides that have videos, then roll them all into a PDF. Hacky, but it'll work in a pinch.
+
+* Install Deck tape in same directory as the reveal.js presentation: `npm install decktape`
+* Make a directory to hold screenshots: `mkdir screenshots`
+* Run Decktap: ````npm bin`/decktape --screenshots reveal -s 1920x1080 http://192.168.1.105:8000/ 2019-rome-maker-faire-talk-Szczys.pdf```
+* Turn off controls and progress to take screenshots of the video slides:
+  * `controls: false,`
+  * `progress: false,`
+* Take screenshots the same sizes as captured by Decktape and replace the appropriate slides in the screenshots directory
+* `cd screenshots`
+* convert "*.png" -quality 100 2019-rome-maker-faire-talk_Szczys-Mike.pdf

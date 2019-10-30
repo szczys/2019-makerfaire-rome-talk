@@ -50,7 +50,7 @@
 			maxScale: 5.0,
 
 			// Display presentation control arrows
-			controls: false,
+			controls: true,
 
 			// Help the user learn the controls by providing hints, for example by
 			// bouncing the down arrow when they first encounter a vertical slide
@@ -64,7 +64,7 @@
 			controlsBackArrows: 'faded',
 
 			// Display a presentation progress bar
-			progress: false,
+			progress: true,
 
 			// Display the page number of the current slide
 			// - true:    Show slide number
